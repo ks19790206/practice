@@ -4,16 +4,15 @@ require 'bundler'
 Bundler.require
 
 get '/' do
-    erb :index
+ erb :index
 end
 
 get '/name_new' do
-    erb :name
+ erb :name
 end
 
 post '/datebase' do
  puts "###これはPOSTされたデータです###"
  p params
- #ここでDBに保存する
  redirect '/'
 end
