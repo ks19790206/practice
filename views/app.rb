@@ -11,7 +11,7 @@ get '/name_new' do
  erb :name
 end
 
-post '/datebase' do
+post '/data' do
  puts "###これはPOSTされたデータです###"
  p params
  redirect '/'
