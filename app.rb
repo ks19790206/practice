@@ -2,16 +2,19 @@ require 'rubygems'
 require 'bundler'
 
 Bundler.require
+set :database,{adapter: "sqlite3",database: "datas.sqlite3"}
 
 get '/' do
- erb :index
+ erb :index_staff_all
 end
 
-get '/name_new' do
- erb :name
+get '/staff_insert' do
+ erb :staff_insert
 end
 
-post '/data' do
+
+
+post '/datas' do
  puts "###これはPOSTされたデータです###"
  p params
  redirect '/'
