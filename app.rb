@@ -24,7 +24,7 @@ post '/datas' do
  puts "###これはPOSTされたデータです###"
  p params
  name=params[:area,:name,:adress,:email,:tel]
- data=Datas.new({area: area,name: name,adress: adress,email: email,tel: tel })
+ data=Data.new({area: area,name: name,adress: adress,email: email,tel: tel })
  data.save
  redirect '/'
  end
